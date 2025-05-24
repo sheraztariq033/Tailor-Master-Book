@@ -1,0 +1,27 @@
+{
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "welcome": "Welcome",
+    "loading": "Loading..."
+  },
+  "loginScreen": {
+    "title": "Login to Darzi Book",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "loginButton": "Login"
+  },
+  "settingsScreen": {
+    "title": "Settings",
+    "language": "Language",
+    "darkMode": "Dark Mode",
+    "notifications": "Notifications",
+    "account": "Account",
+    "dataManagement": "Data Management",
+    "backupData": "Backup Data",
+    "exportData": "Export Data",
+    "importData": "Import Data",
+    "support": "Support",
+    "logout": "Logout"
+  }
+}

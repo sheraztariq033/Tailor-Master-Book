@@ -1,0 +1,16 @@
+{
+  "id": "measurement_placeholder_id_789",
+  "customerId": "customer_placeholder_id_456",
+  "tailorId": "user_placeholder_id_123",
+  "outfitType": "Men's Suit",
+  "measurementValues": {
+    "chest": 40,
+    "waist": 32,
+    "sleeveLength": 25,
+    "shoulder": 18,
+    "neck": 16,
+    "length": 30
+  },
+  "takenDate": "2023-10-26T12:00:00Z",
+  "notes": "Customer prefers a slim fit."
+}

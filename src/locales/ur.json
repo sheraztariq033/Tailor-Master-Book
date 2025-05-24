@@ -1,0 +1,27 @@
+{
+  "common": {
+    "save": "محفوظ کریں",
+    "cancel": "منسوخ کریں",
+    "welcome": "خوش آمدید",
+    "loading": "لوڈ ہو رہا ہے۔۔۔"
+  },
+  "loginScreen": {
+    "title": "درزی بک میں لاگ ان کریں",
+    "emailPlaceholder": "ای میل",
+    "passwordPlaceholder": "پاس ورڈ",
+    "loginButton": "لاگ ان کریں"
+  },
+  "settingsScreen": {
+    "title": "ترتیبات",
+    "language": "زبان",
+    "darkMode": "ڈارک موڈ",
+    "notifications": "اطلاعات",
+    "account": "اکاؤنٹ",
+    "dataManagement": "ڈیٹا مینجمنٹ",
+    "backupData": "ڈیٹا کا بیک اپ",
+    "exportData": "ڈیٹا ایکسپورٹ کریں۔",
+    "importData": "ڈیٹا امپورٹ کریں۔",
+    "support": "سپورٹ",
+    "logout": "لاگ آوٹ"
+  }
+}

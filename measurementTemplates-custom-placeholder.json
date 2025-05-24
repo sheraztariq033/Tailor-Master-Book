@@ -1,0 +1,15 @@
+{
+  "id": "template_placeholder_custom_002",
+  "name": "John's Custom Sherwani",
+  "outfitType": "Sherwani",
+  "defaultValues": {
+    "chest": 42,
+    "waist": 34,
+    "sleeveLength": 26,
+    "shoulder": 19,
+    "length": 45,
+    "collar": 17
+  },
+  "isSystem": false,
+  "userId": "user_placeholder_id_123"
+}

@@ -1,0 +1,36 @@
+{
+  "projectId": "darzi-book-mobile-app",
+  "region": "us-central",
+  "auth": {
+    "emailPasswordEnabled": true,
+    "phoneNumberEnabled": true
+  },
+  "webAppConfig": {
+    "apiKey": "AIzaSyYOUR_API_KEY",
+    "authDomain": "darzi-book-mobile-app.firebaseapp.com",
+    "projectId": "darzi-book-mobile-app",
+    "storageBucket": "darzi-book-mobile-app.appspot.com",
+    "messagingSenderId": "YOUR_MESSAGING_SENDER_ID",
+    "appId": "YOUR_APP_ID",
+    "measurementId": "YOUR_MEASUREMENT_ID"
+  },
+  "firestore": {
+    "enabled": true,
+    "nativeMode": true,
+    "collections": [
+      "users",
+      "customers",
+      "measurements",
+      "measurementTemplates",
+      "orders",
+      "invoices"
+    ]
+  },
+  "storage": {
+    "enabled": true,
+    "folderStructure": [
+      "/user_uploads/{userId}/order_images/",
+      "/data_exports/{userId}/"
+    ]
+  }
+}

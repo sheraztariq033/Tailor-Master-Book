@@ -1,0 +1,30 @@
+{
+  "id": "invoice_placeholder_id_001",
+  "orderId": "order_placeholder_id_001",
+  "customerId": "customer_placeholder_id_456",
+  "tailorId": "user_placeholder_id_123",
+  "generatedDate": "2023-11-10T19:00:00Z",
+  "items": [
+    {
+      "id": "item_001",
+      "description": "Men's Suit - Wool",
+      "quantity": 1,
+      "unitPrice": 450.00,
+      "amount": 450.00
+    },
+    {
+      "id": "item_002",
+      "description": "Extra Silk Lining",
+      "quantity": 1,
+      "unitPrice": 50.00,
+      "amount": 50.00
+    }
+  ],
+  "subtotal": 500.00,
+  "tax": 0.00,
+  "discount": 0.00,
+  "totalAmount": 500.00,
+  "paidAmount": 100.00,
+  "remainingAmount": 400.00,
+  "paymentStatus": "Partially Paid"
+}

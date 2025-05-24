@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // User can read/write their own user document
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Tailor can CRUD their own associated data
+    function isOwner(tailorId) {
+      return request.auth != null && request.auth.uid == tailorId;
+    }
+
+    match /customers/{customerId} {
+      allow read, write, delete: if isOwner(resource.data.tailorId);
+      allow create: if isOwner(request.resource.data.tailorId); // Check on create
+    }
+    match /measurements/{measurementId} {
+      allow read, write, delete: if isOwner(resource.data.tailorId);
+      allow create: if isOwner(request.resource.data.tailorId);
+    }
+    match /orders/{orderId} {
+      allow read, write, delete: if isOwner(resource.data.tailorId);
+      allow create: if isOwner(request.resource.data.tailorId);
+    }
+    match /invoices/{invoiceId} {
+      allow read, write, delete: if isOwner(resource.data.tailorId);
+      allow create: if isOwner(request.resource.data.tailorId);
+    }
+
+    // Measurement Templates: System templates are readable by any authenticated user.
+    // Custom templates are CRUD by owner.
+    match /measurementTemplates/{templateId} {
+      allow read: if request.auth != null && (resource.data.isSystem == true || isOwner(resource.data.userId));
+      allow create: if request.auth != null && request.resource.data.isSystem == false && isOwner(request.resource.data.userId);
+      allow update, delete: if request.auth != null && resource.data.isSystem == false && isOwner(resource.data.userId);
+    }
+
+    // Shared Order Tokens
+    // Tailors can create tokens (documents) where the document data's tailorId matches their UID.
+    // Tailors can read/delete their own token documents.
+    // No public read access to the collection listing. Individual token documents are fetched by token ID (publicly, by the getPublicOrderStatusByToken function).
+    match /sharedOrderTokens/{token} {
+      allow create: if request.auth != null && request.resource.data.tailorId == request.auth.uid;
+      allow read, delete: if request.auth != null && resource.data.tailorId == request.auth.uid;
+      // Note: The getPublicOrderStatusByToken function will use admin SDK to read a specific token document by its ID,
+      // bypassing these direct read rules for that specific operation. This rule here is for tailors managing their tokens.
+    }
+
+
+    // (Placeholder for Customer Portal access if implemented)
+    // match /orders/{orderId} {
+    //   allow get: if request.auth != null && request.auth.token.isCustomer == true && resource.data.customerId == request.auth.token.customerId;
+    // }
+
+    // Default deny all other access - BE CAREFUL WITH THIS IN DEVELOPMENT if collections are not perfectly secured above
+    // match /{document=**} {
+    //  allow read, write: if false;
+    // }
+  }
+}

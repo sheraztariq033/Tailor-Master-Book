@@ -1,0 +1,23 @@
+{
+  "id": "order_placeholder_id_001",
+  "customerId": "customer_placeholder_id_456",
+  "tailorId": "user_placeholder_id_123",
+  "outfitType": "Men's Suit",
+  "measurementId": "measurement_placeholder_id_789",
+  "orderDate": "2023-10-27T09:00:00Z",
+  "deadlineDate": "2023-11-10T18:00:00Z",
+  "status": "Pending",
+  "features": {
+    "fabric": "Wool",
+    "lining": "Silk",
+    "buttons": "Mother of Pearl",
+    "lapelStyle": "Notch"
+  },
+  "images": [
+    "/user_uploads/user_placeholder_id_123/order_images/order_placeholder_id_001/image1.jpg",
+    "/user_uploads/user_placeholder_id_123/order_images/order_placeholder_id_001/image2.jpg"
+  ],
+  "notes": "Urgent order. Customer needs it for a wedding.",
+  "totalAmount": 500.00,
+  "paidAmount": 100.00
+}

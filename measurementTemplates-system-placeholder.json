@@ -1,0 +1,15 @@
+{
+  "id": "template_placeholder_system_001",
+  "name": "Standard Men's Suit",
+  "outfitType": "Men's Suit",
+  "defaultValues": {
+    "chest": null,
+    "waist": null,
+    "sleeveLength": null,
+    "shoulder": null,
+    "neck": null,
+    "length": null
+  },
+  "isSystem": true,
+  "userId": null
+}

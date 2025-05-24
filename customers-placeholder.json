@@ -1,0 +1,12 @@
+{
+  "id": "customer_placeholder_id_456",
+  "tailorId": "user_placeholder_id_123",
+  "name": "Alice Wonderland",
+  "phoneNumber": "+19876543210",
+  "email": "alice.wonder@example.com",
+  "address": "123 Rabbit Hole Lane, Wonderland",
+  "createdAt": "2023-10-26T11:00:00Z",
+  "lastVisit": "2023-10-26T11:00:00Z",
+  "tags": ["VIP", "New"],
+  "notes": "Prefers tea-party themed attire."
+}
